@@ -1,0 +1,121 @@
+
+
+.form-input-group label {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: unset;
+}
+
+.style-input {
+    padding: 1px 12px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    font-size: 14px;
+    height: 20px;
+}
+
+    .style-input:focus {
+        border-color: rgba(104,184,40,.5);
+        outline: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(104,184,40,.6);
+        box-shadow: unset
+    }
+
+.style-checkbox {
+    padding: 6px 12px;
+    display: block;
+    border: none;
+    width: 10%;
+    height: 16px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+.bold {
+    font-weight: bold;
+}
+
+.mt5 {
+    margin-top: 5px
+}
+
+.mt10 {
+    margin-top: 1px
+}
+
+.mt15 {
+    margin-top: 15px
+}
+
+.mt20 {
+    margin-top: 20px
+}
+
+.mt25 {
+    margin-top: 25px
+}
+
+.tab-pane .panel-default {
+    margin-bottom: unset;
+}
+
+    .tab-pane .panel-default .panel-heading h5 {
+        font-size: 15px;
+    }
+
+.tab-pane .panel .panel-body {
+    color: unset;
+}
+
+    .tab-pane .panel .panel-body label {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: unset;
+    }
+
+.user-info-navbar {
+    height: 60px;
+}
+
+    .user-info-navbar ul{
+        margin-top: unset;
+    }
+
+    .user-info-navbar .user-info-menu > li {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: unset;
+        border-top: 0;
+        border-bottom: 0;
+        display: block;
+        float: left;
+        margin-top: unset;
+    }
+
+        .user-info-navbar .user-info-menu > li > a {
+            border-bottom: unset;
+            height: 50px;
+        }
+
+        .user-info-navbar .user-info-menu > li > form {
+            border-bottom: unset;
+            height: 50px;
+        }
+
+/*.navbar {
+    position: relative;
+    min-height: 30px;
+    margin-bottom: 10px;
+    height: 35px;
+    border: 1px solid transparent;
+}*/
+
+.navbar-nav > li > a {
+    padding-top: 10px;
+}
