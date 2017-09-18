@@ -119,3 +119,32 @@
 .navbar-nav > li > a {
     padding-top: 10px;
 }
+
+.page-container .main-content .page-title {
+    margin: unset;
+    margin-bottom: 5px;
+    padding: 10px 0;
+}
+
+.sidebar-menu .main-menu {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    list-style: none;
+}
+
+.sidebar-menu {
+    width: 230px;
+}
+
+.page-container .main-content-table {
+    display: table-cell;
+    position: relative;
+    z-index: 1;
+    padding: 0px;
+    padding-bottom: 0;
+    vertical-align: top;
+    word-break: break-word;
+    width: 100%;
+}

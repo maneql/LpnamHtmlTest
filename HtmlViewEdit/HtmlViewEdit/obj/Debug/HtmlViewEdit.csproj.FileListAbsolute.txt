@@ -54,3 +54,4 @@ C:\Users\lpnam\Documents\MANEL\LpnamHtmlTest\HtmlViewEdit\HtmlViewEdit\bin\Micro
 C:\Users\lpnam\Documents\MANEL\LpnamHtmlTest\HtmlViewEdit\HtmlViewEdit\obj\Debug\HtmlViewEdit.csproj.CoreCompileInputs.cache
 C:\Users\lpnam\Documents\MANEL\LpnamHtmlTest\HtmlViewEdit\HtmlViewEdit\obj\Debug\HtmlViewEdit.dll
 C:\Users\lpnam\Documents\MANEL\LpnamHtmlTest\HtmlViewEdit\HtmlViewEdit\obj\Debug\HtmlViewEdit.pdb
+C:\Users\lpnam\Documents\MANEL\LpnamHtmlTest\HtmlViewEdit\HtmlViewEdit\obj\Debug\HtmlViewEdit.csprojResolveAssemblyReference.cache

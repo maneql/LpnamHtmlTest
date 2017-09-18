@@ -83,7 +83,10 @@
     <Content Include="Views\assets\css\fonts\meteocons\font\meteocons.eot" />
     <Content Include="Views\assets\css\fonts\meteocons\font\meteocons.ttf" />
     <Content Include="Views\assets\css\fonts\meteocons\font\meteocons.woff" />
+    <Content Include="Views\assets\css\other\styletest.css" />
     <Content Include="Views\assets\images\news-image-widget-3" />
+    <Content Include="Views\assets\images\SureERP-collapsed%402x.png" />
+    <Content Include="Views\assets\images\SureERP.png" />
     <Content Include="Views\assets\js\ckeditor\CHANGES.md" />
     <Content Include="Views\assets\js\ckeditor\LICENSE.md" />
     <Content Include="Views\assets\js\ckeditor\plugins\scayt\LICENSE.md" />
@@ -1402,6 +1405,7 @@
     <Content Include="Views\mailbox-compose.html" />
     <Content Include="Views\mailbox-main.html" />
     <Content Include="Views\mailbox-message.html" />
+    <Content Include="Views\MenuNew.html" />
     <Content Include="Views\skin-aero.html" />
     <Content Include="Views\skin-concrete.html" />
     <Content Include="Views\skin-facebook.html" />
