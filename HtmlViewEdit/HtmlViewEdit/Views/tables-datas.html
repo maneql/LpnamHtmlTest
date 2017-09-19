@@ -31,9 +31,25 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
+    <script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('times').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+    </script>
 </head>
-<body class="page-body">
+<body class="page-body" onload="startTime()">
 
     <div class="settings-pane">
 
@@ -1243,11 +1259,11 @@
                         </ul>
                     </li>
 
-                    <li>
+                    <!--<li>
                         <a href="#" data-toggle="chat">
                             <i class="fa-comments-o"></i>
                         </a>
-                    </li>
+                    </li>-->
 
                 </ul>
 
@@ -1271,8 +1287,7 @@
                             <a href="tables-basic.html">Tables</a>
                         </li>
                         <li class="active">
-
-                            <strong>Data Tables</strong>
+                            <a href="#"><strong> Data Table</strong></a>
                         </li>
                     </ol>
 
@@ -1281,7 +1296,13 @@
             </div>
 
 
-            <nav class="navbar navbar-default" role="navigation" style="min-height: 30px; margin-bottom: 5px; height: 35px;">
+            <nav class="navbar navbar-default" role="navigation" style="margin-bottom: 5px; min-height:unset">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span>Danh mục  </span>
+                        <i class="fa-bars"></i>
+                    </button>
+                </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="disable">
@@ -1314,7 +1335,9 @@
                         <li class="disable">
                             <a href="#"><i class="fa fa-refresh"></i> Làm mới</a>
                         </li>
-
+                        <li class="disable">
+                            <a href="#" data-toggle="chat"><i class="fa fa-gear"></i> Chức năng</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -1322,12 +1345,10 @@
 
             <!-- Basic Setup -->
             <div class="panel panel-default">
-
-                <div class="panel-body">
-
+                <div class="panel-body" style="padding:unset">
                     <script type="text/javascript">
                         jQuery(document).ready(function ($) {
-                            $("#example-1").dataTable({
+                            $("#table-1").dataTable({
                                 "autoWidth": false,
                                 "searching": false,
                                 "lengthChange": false,
@@ -1335,24 +1356,97 @@
                                 "scrollX": true,
                                 "ordering": false,
                                 "info": false,
-
-                                "columns": [
-                                    { name: "Số đơn hàng", title: "Số đơn hàng", "width": "150px" },
-                                    { title: "Loại đơn hàng", "width": "160px" },
-                                    { name: "Ngày đơn hàng", title: "Ngày đơn hàng", "width": "170px" },
-                                    { title: "Ngày yêu cầu", "width": "170px" },
-                                ],
-                                "data": [
-                                    ["DHB1707-006", "Đơn hàng bán", "09/08/2017", "09/08/2017"],
-                                    ["DHB1707-006", "Đơn hàng bán", "02/07/2017", "02/07/2017"],
-                                ] 
+                                "dom": 't',
+                                "jQueryUI": true
                             });
                         });
                     </script>
-
-                    <table id="example-1" class="table table-striped table-bordered">
+                    <table id="table-1" class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th width="150px">Số đơn hàng</th>
+                                <th width="160px">Loại đơn hàng</th>
+                                <th width="170px">Ngày đơn hàng</th>
+                                <th width="150px">Ngày yêu cầu</th>
+                                <th width="150px">Khách hàng</th>
+                                <th width="300px">Giao hàng đến</th>
+                                <th width="150px">Xét duyện</th>
+                                <th width="150px">Tình trạng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DHB1707-006</td>
+                                <td>Đơn hàng bán</td>
+                                <td>09/08/2017</td>
+                                <td>09/08/2017</td>
+                                <td>DLMN05</td>
+                                <td>CÔNG TY TNHH  XD TM ĐẠI Á CHÂU</td>
+                                <td>Đã duyệt</td>
+                                <td>Đặt hàng</td>
+                            </tr>
+                            <tr>
+                                <td>DHB1707-006</td>
+                                <td>Đơn hàng bán</td>
+                                <td>02/07/2017</td>
+                                <td>02/07/2017</td>
+                                <td>DLMN05</td>
+                                <td>CÔNG TY TNHH  XD TM ĐẠI Á CHÂU</td>
+                                <td>Mới tạo</td>
+                                <td>Đã xuất kho</td>
+                            </tr>
+                            <tr>
+                                <td>DHB1707-006</td>
+                                <td>Đơn hàng bán</td>
+                                <td>09/08/2017</td>
+                                <td>15/08/2017</td>
+                                <td>DLMN05</td>
+                                <td>CÔNG TY TNHH  XD TM ĐẠI Á CHÂU</td>
+                                <td>Mới tạo</td>
+                                <td>Đặt hàng</td>
+                            </tr>
+                            <tr>
+                                <td>DHB1707-010</td>
+                                <td>Đơn hàng bán</td>
+                                <td>17/07/2017</td>
+                                <td>17/07/2017</td>
+                                <td>DLCN03</td>
+                                <td>CÔNG TY TNHH CN Ô TÔ ĐẮK LẮK</td>
+                                <td>Mới tạo</td>
+                                <td>Đã xuất kho</td>
+                            </tr>
+                            <tr>
+                                <td>DHB1707-012</td>
+                                <td>Đơn hàng bán</td>
+                                <td>08/07/2017</td>
+                                <td>08/07/2017</td>
+                                <td>DLCN03</td>
+                                <td>CÔNG TY TNHH CN Ô TÔ ĐẮK LẮK</td>
+                                <td>Mới tạo</td>
+                                <td>Đã xuất kho</td>
+                            </tr>
+                            <tr>
+                                <td>DHB1707-014</td>
+                                <td>Đơn hàng bán</td>
+                                <td>01/07/2017</td>
+                                <td>01/07/2017</td>
+                                <td>DLMK01</td>
+                                <td>CÔNG TY CP TM XNK HUY TIẾN DŨNG</td>
+                                <td>Mới tạo</td>
+                                <td>Đã xuất kho</td>
+                            </tr>
+                            <tr>
+                                <td>DHB1707-015</td>
+                                <td>Đơn hàng bán</td>
+                                <td>03/07/2017</td>
+                                <td>03/07/2017</td>
+                                <td>DLMB02</td>
+                                <td>CTY CP Ô TÔ HYUNDAI ĐÔNG NAM</td>
+                                <td>Mới tạo</td>
+                                <td>Đã xuất kho</td>
+                            </tr>
+                        </tbody>
                     </table>
-
                 </div>
             </div>
 
@@ -1389,16 +1483,12 @@
 
         <div id="chat" class="fixed">
             <!-- start: Chat Section -->
-
             <div class="chat-inner">
-
-
-                <h2 class="chat-header">
+                <h2 class="chat-header" style="color:black; font-weight:bold">
                     <a href="#" class="chat-close" data-toggle="chat">
                         <i class="fa-plus-circle rotate-45deg"></i>
                     </a>
-
-                    Chat
+                    Chức năng
                     <span class="badge badge-success is-hidden">0</span>
                 </h2>
 
@@ -1422,93 +1512,50 @@
                         });
                 </script>
 
-
                 <div class="chat-group">
-                    <strong>Favorites</strong>
-
-                    <a href="#"><span class="user-status is-online"></span> <em>Catherine J. Watkins</em></a>
-                    <a href="#"><span class="user-status is-online"></span> <em>Nicholas R. Walker</em></a>
-                    <a href="#"><span class="user-status is-busy"></span> <em>Susan J. Best</em></a>
-                    <a href="#"><span class="user-status is-idle"></span> <em>Fernando G. Olson</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Brandon S. Young</em></a>
+                    <strong style="color:black; font-weight:bold">Xét Duyệt</strong>
+                    <a href="#"><span class="user-status is-online"></span> <em>Phát hành</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Xét duyệt</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Hủy xét duyệt</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Cancel Release</em></a>
                 </div>
-
-
                 <div class="chat-group">
-                    <strong>Work</strong>
-
-                    <a href="#"><span class="user-status is-busy"></span> <em>Rodrigo E. Lozano</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Robert J. Garcia</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Daniel A. Pena</em></a>
+                    <strong style="color:black; font-weight:bold">Cập nhật</strong>
+                    <a href="#"><span class="user-status is-online"></span> <em>Phiếu giao hàng - từng phần</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Phiếu nhập hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Đơn hàng tổng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Hủy đơn hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Đóng đơn hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Xác nhận giao hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Xuất hủy</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Cập nhật xuất kho</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Cập nhật xuất kho test</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Cập nhật hóa đơn</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Cập nhật nhận kho</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Tạo đơn hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Xuất hóa đơn điều chỉnh</em></a>
                 </div>
-
-
                 <div class="chat-group">
-                    <strong>Other</strong>
+                    <strong style="color:black; font-weight:bold">Chức năng</strong>
+                    <a href="#"><span class="user-status is-online"></span> <em>Dành sẵn hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Ước tính giá</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Đơn hàng kế hoạch</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Hủy dành hàng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Create Credit Note</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Create PO</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Đơn hàng phát hành</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Đơn hàng đổi</em></a>
+                </div>
+                <div class="chat-group">
+                    <strong style="color:black; font-weight:bold">Truy vấn</strong>
+                    <a href="#"><span class="user-status is-online"></span> <em>Truy vấn đơn hàng tổng</em></a>
+                    <a href="#"><span class="user-status is-online"></span> <em>Truy vấn ước tính giá</em></a>
 
-                    <a href="#"><span class="user-status is-online"></span> <em>Dennis E. Johnson</em></a>
-                    <a href="#"><span class="user-status is-online"></span> <em>Stuart A. Shire</em></a>
-                    <a href="#"><span class="user-status is-online"></span> <em>Janet I. Matas</em></a>
-                    <a href="#"><span class="user-status is-online"></span> <em>Mindy A. Smith</em></a>
-                    <a href="#"><span class="user-status is-busy"></span> <em>Herman S. Foltz</em></a>
-                    <a href="#"><span class="user-status is-busy"></span> <em>Gregory E. Robie</em></a>
-                    <a href="#"><span class="user-status is-busy"></span> <em>Nellie T. Foreman</em></a>
-                    <a href="#"><span class="user-status is-busy"></span> <em>William R. Miller</em></a>
-                    <a href="#"><span class="user-status is-idle"></span> <em>Vivian J. Hall</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Melinda A. Anderson</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Gary M. Mooneyham</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Robert C. Medina</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Dylan C. Bernal</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Marc P. Sanborn</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Kenneth M. Rochester</em></a>
-                    <a href="#"><span class="user-status is-offline"></span> <em>Rachael D. Carpenter</em></a>
                 </div>
 
             </div>
 
-            <!-- conversation template -->
-            <div class="chat-conversation">
 
-                <div class="conversation-header">
-                    <a href="#" class="conversation-close">
-                        &times;
-                    </a>
-
-                    <span class="user-status is-online"></span>
-                    <span class="display-name">Arlind Nushi</span>
-                    <small>Online</small>
-                </div>
-
-                <ul class="conversation-body">
-                    <li>
-                        <span class="user">Arlind Nushi</span>
-                        <span class="time">09:00</span>
-                        <p>Are you here?</p>
-                    </li>
-                    <li class="odd">
-                        <span class="user">Brandon S. Young</span>
-                        <span class="time">09:25</span>
-                        <p>This message is pre-queued.</p>
-                    </li>
-                    <li>
-                        <span class="user">Brandon S. Young</span>
-                        <span class="time">09:26</span>
-                        <p>Whohoo!</p>
-                    </li>
-                    <li class="odd">
-                        <span class="user">Arlind Nushi</span>
-                        <span class="time">09:27</span>
-                        <p>Do you like it?</p>
-                    </li>
-                </ul>
-
-                <div class="chat-textarea">
-                    <textarea class="form-control autogrow" placeholder="Type your message"></textarea>
-                </div>
-
-            </div>
-
-            <!-- end: Chat Section -->
         </div>
 
     </div>
@@ -1516,225 +1563,65 @@
     <div class="footer-sticked-chat">
         <!-- Start: Footer Sticked Chat -->
 
-        <script type="text/javascript">
-                        function toggleSampleChatWindow() {
-                            var $chat_win = jQuery("#sample-chat-window");
 
-                            $chat_win.toggleClass('open');
-
-                            if ($chat_win.hasClass('open')) {
-                                var $messages = $chat_win.find('.ps-scrollbar');
-
-                                if ($.isFunction($.fn.perfectScrollbar)) {
-                                    $messages.perfectScrollbar('destroy');
-
-                                    setTimeout(function () {
-                                        $messages.perfectScrollbar();
-                                        $chat_win.find('.form-control').focus();
-                                    }, 300);
-                                }
-                            }
-
-                            jQuery("#sample-chat-window form").on('submit', function (ev) {
-                                ev.preventDefault();
-                            });
-                        }
-
-                        jQuery(document).ready(function ($) {
-                            $(".footer-sticked-chat .chat-user, .other-conversations-list a").on('click', function (ev) {
-                                ev.preventDefault();
-                                toggleSampleChatWindow();
-                            });
-
-                            $(".mobile-chat-toggle").on('click', function (ev) {
-                                ev.preventDefault();
-
-                                $(".footer-sticked-chat").toggleClass('mobile-is-visible');
-                            });
-                        });
-        </script>
 
         <ul class="chat-conversations list-unstyled">
 
-            <!-- Extra Chat Conversations collected not to exceed window width -->
             <li class="browse-more">
-                <a href="#" class="chat-user">
-                    <i class="linecons-comment"></i>
-                    <span>3</span>
-                </a>
-
-                <!-- These conversations are hidden in screen -->
-                <ul class="other-conversations-list">
-                    <li>
-                        <!-- Minimal User Info Link -->
-                        <a href="#">
-                            Catherine J. Watkins
-                            <span>&times;</span>
-                        </a>
-                    </li>
-                    <li>
-                        <!-- Minimal User Info Link -->
-                        <a href="#">
-                            Nicholas R. Walker
-                            <span>&times;</span>
-                        </a>
-                    </li>
-                    <li>
-                        <!-- Minimal User Info Link -->
-                        <a href="#">
-                            Susan J. Best
-                            <span>&times;</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li id="sample-chat-window">
                 <!-- User Info Link -->
                 <a href="#" class="chat-user">
-                    <span class="user-status is-online"></span>
-                    Art Ramadani
+                    <i class="fa fa-users"></i>
                 </a>
-
-                <span class="badge badge-purple">4</span>
-
-                <!-- Conversation Window -->
-                <div class="conversation-window">
-                    <!-- User Info Link in header (used to close the chat bar) -->
-                    <a href="#" class="chat-user">
-                        <span class="close">&times;</span>
-
-                        <span class="user-status is-online"></span>
-                        Art Ramadani
-                    </a>
-
-                    <ul class="conversation-messages ps-scrollbar ps-scroll-down">
-
-                        <!-- Will indicate time -->
-                        <li class="time">Thursday 04, December '14</li>
-
-                        <li>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-1.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                            <div class="message-entry">
-                                <p>Hello John, how are you?</p>
-                            </div>
-                        </li>
-
-                        <li class="me">
-                            <!-- adding class="me" will indicate that "you" are sending a message -->
-                            <div class="message-entry">
-                                <p>Hi Art, I am fine :) How about you?</p>
-                            </div>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-4.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-1.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                            <div class="message-entry">
-                                <p>Warmth his law design say are person. Pronounce suspected in belonging conveying ye repulsive.</p>
-                            </div>
-                        </li>
-
-                        <li class="me">
-                            <!-- adding class="me" will indicate that "you" are sending a message -->
-                            <div class="message-entry">
-                                <p>Comfort reached gay perhaps chamber his six detract besides add. Moonlight newspaper.</p>
-                                <p>Timed voice share led his widen noisy young.</p>
-                                <p>His six detract besides add moonlight newspaper.</p>
-                            </div>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-4.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-1.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                            <div class="message-entry">
-                                <p>Hello John, how are you?</p>
-                            </div>
-                        </li>
-
-                        <li class="me">
-                            <!-- adding class="me" will indicate that "you" are sending a message -->
-                            <div class="message-entry">
-                                <p>Hi Art, I am fine :) How about you?</p>
-                            </div>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-4.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                        </li>
-
-                        <li>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-1.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                            <div class="message-entry">
-                                <p>Hello John, how are you?</p>
-                            </div>
-                        </li>
-
-                        <!-- Will indicate time -->
-                        <li class="time">Today 17:12</li>
-
-                        <li class="me">
-                            <!-- adding class="me" will indicate that "you" are sending a message -->
-                            <div class="message-entry">
-                                <p>Hi Art, I am fine :) How about you?</p>
-
-                            </div>
-                            <div class="user-info">
-                                <a href="#">
-                                    <img src="assets/images/user-4.png" width="30" height="30" alt="user-image" />
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                    <form method="post" class="chat-form">
-                        <input type="text" class="form-control" placeholder="Enter your message..." />
-                    </form>
-                </div>
+                <span class="badge badge-purple">5</span>
             </li>
-
-            <li>
+            <li class="browse-more">
                 <!-- User Info Link -->
                 <a href="#" class="chat-user">
-                    <span class="user-status is-idle"></span>
-                    Ylli Pylla
+                    <i class="fa fa-user-md"></i>
+                    ADMIN
                 </a>
             </li>
-
-            <li>
+            <li class="browse-more">
                 <!-- User Info Link -->
                 <a href="#" class="chat-user">
-                    <span class="user-status is-busy"></span>
-                    Arlind Nushi
+                    <i class="fa fa-user"></i>
+                    ERP
                 </a>
             </li>
-
+            <li class="browse-more">
+                <!-- User Info Link -->
+                <a href="#" class="chat-user">
+                    <i class="fa fa-desktop"></i>
+                    172.16.5.81\SQL2012
+                </a>
+            </li>
+            <li class="browse-more">
+                <!-- User Info Link -->
+                <a href="#" class="chat-user">
+                    <i class="fa fa-database"></i>
+                    LVERP
+                </a>
+            </li>
+            <li class="browse-more">
+                <!-- User Info Link -->
+                <a href="#" class="chat-user">
+                    <i class="fa fa-calendar"></i>
+                    <script>
+                        var currentDate = new Date(),
+                            day = currentDate.getDate(),
+                            month = currentDate.getMonth() + 1,
+                            year = currentDate.getFullYear();
+                        document.write(day + "/" + month + "/" + year)
+                    </script>
+                </a>
+            </li>
+            <li class="browse-more">
+                <!-- User Info Link -->
+                <a href="#" class="chat-user">
+                    <i class="fa fa-clock-o"></i>
+                    <text id="times"></text>
+                </a>
+            </li>
         </ul>
 
         <a href="#" class="mobile-chat-toggle">

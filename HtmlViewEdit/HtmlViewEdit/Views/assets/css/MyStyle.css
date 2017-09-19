@@ -116,9 +116,6 @@
     border: 1px solid transparent;
 }*/
 
-.navbar-nav > li > a {
-    padding-top: 10px;
-}
 
 .page-container .main-content .page-title {
     margin: unset;
