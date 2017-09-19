@@ -35,11 +35,6 @@
     font-weight: bold;
 }
 
-
-.bold {
-    font-weight: bold;
-}
-
 .mt5 {
     margin-top: 5px
 }
@@ -78,44 +73,6 @@
         margin-bottom: unset;
     }
 
-.user-info-navbar {
-    height: 60px;
-}
-
-    .user-info-navbar ul{
-        margin-top: unset;
-    }
-
-    .user-info-navbar .user-info-menu > li {
-        position: relative;
-        margin: 0;
-        padding: 0;
-        border: unset;
-        border-top: 0;
-        border-bottom: 0;
-        display: block;
-        float: left;
-        margin-top: unset;
-    }
-
-        .user-info-navbar .user-info-menu > li > a {
-            border-bottom: unset;
-            height: 50px;
-        }
-
-        .user-info-navbar .user-info-menu > li > form {
-            border-bottom: unset;
-            height: 50px;
-        }
-
-/*.navbar {
-    position: relative;
-    min-height: 30px;
-    margin-bottom: 10px;
-    height: 35px;
-    border: 1px solid transparent;
-}*/
-
 
 .page-container .main-content .page-title {
     margin: unset;
@@ -144,4 +101,170 @@
     vertical-align: top;
     word-break: break-word;
     width: 100%;
+}
+
+/*******************************
+* MODAL AS LEFT/RIGHT SIDEBAR
+* Add "left" or "right" in modal parent div, after class="modal".
+* Get free snippets on bootpen.com
+*******************************/
+.modal.right .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: auto;
+    max-width: 1000px;
+    height: auto;
+    padding: 5px;
+    resize: inherit;
+    overflow: auto;
+    /*-webkit-transform: translate3d(0%, 0, 0);
+    -ms-transform: translate3d(0%, 0, 0);
+    -o-transform: translate3d(0%, 0, 0);
+    transform: translate3d(0%, 0, 0);*/
+}
+
+.modal.right .modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.modal.right .modal-body {
+    padding: 15px 15px 80px;
+}
+
+/*Right*/
+.modal.right.fade .modal-dialog {
+    right: -320px;
+    -webkit-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, right 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, right 0.3s ease-out;
+    transition: opacity 0.3s linear, right 0.3s ease-out;
+}
+
+.modal.right.fade.in .modal-dialog {
+    right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+    border-radius: 0;
+    border: none;
+}
+
+
+
+@media (max-width:767px) {
+    .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none
+    }
+
+        .navbar-nav .open .dropdown-menu > li > a, .navbar-nav .open .dropdown-menu .dropdown-header {
+            padding: 5px 15px 5px 25px
+        }
+
+        .navbar-nav .open .dropdown-menu > li > a {
+            line-height: 18px
+        }
+
+            .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
+                background-image: none
+            }
+}
+
+@media (min-width:768px) {
+    .navbar-nav {
+        float: left;
+        margin: 0
+    }
+
+        .navbar-nav > li {
+            float: left
+        }
+
+            .navbar-nav > li > a {
+                padding-top: 23.5px;
+                padding-bottom: 23.5px
+            }
+}
+
+.navbar-form {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 10px 15px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.1);
+    margin-top: 16.5px;
+    margin-bottom: 16.5px
+}
+
+.user-info-navbar {
+    background-color: #fff;
+    min-height: 0;
+    border: 0;
+    padding: 0;
+    margin: -30px;
+    margin-bottom: 30px
+}
+
+    .user-info-navbar .user-info-menu {
+        margin: 0
+    }
+
+        .user-info-navbar .user-info-menu li {
+            line-height: 1;
+            min-height: unset
+        }
+
+        .user-info-navbar .user-info-menu > li {
+            border-bottom:unset
+        }
+
+            .user-info-navbar .user-info-menu > li > a {
+                position: relative;
+                display: block;
+                padding: 15px 20px;
+                color: #979898;
+                border-bottom: 1px solid #fff;
+                top: 1px;
+                z-index: 5;
+                text-decoration: none
+            }
+
+            .user-info-navbar .user-info-menu > li > form {
+                position: relative;
+                display: block;
+                padding: 15px 20px;
+                padding-bottom: unset;
+                margin: 0;
+                border-bottom: 1px solid #fff
+            }
+
+            .user-info-navbar .user-info-menu > li.search-form .search-field, .navbar.horizontal-menu .navbar-inner > .nav > li.search-form .search-field {
+                height: 15px;
+            }
+
+
+
+@media (min-width:768px) {
+    .navbar-nav {
+        float: left;
+        margin: 0
+    }
+
+        .navbar-nav > li {
+            float: left
+        }
+
+            .navbar-nav > li > a {
+                padding-top: 7px;
+                padding-bottom: 7px
+            }
 }
