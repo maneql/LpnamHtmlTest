@@ -215,10 +215,14 @@
             }
 
 .nav.nav-tabs > li {
-    padding-left:unset;
-    margin-left: 5px;
-    margin-top: 2px;
-    margin-bottom: 2px
+    padding:unset;
+    margin:unset;
+}
+
+.nav.nav-tabs > li > a{
+    padding: 2px;
+    margin: 2px;
+    font-size: 13px
 }
 
 @media (max-width:767px) {
