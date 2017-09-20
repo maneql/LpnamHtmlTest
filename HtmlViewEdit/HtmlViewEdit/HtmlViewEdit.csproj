@@ -1429,6 +1429,7 @@
     <Content Include="Views\skin-white.html" />
     <Content Include="Views\tables-basic.html" />
     <Content Include="Views\tables-datas.html" />
+    <Content Include="Views\tables-datas2.html" />
     <Content Include="Views\tables-datatables.html" />
     <Content Include="Views\tables-responsive.html" />
     <Content Include="Views\ui-alerts.html" />
