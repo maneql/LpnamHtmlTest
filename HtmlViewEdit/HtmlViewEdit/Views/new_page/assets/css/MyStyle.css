@@ -1,5 +1,18 @@
 
 
+.form-input-group h5 {
+    color: #40bbea;
+    font-size: 16px
+}
+
+.form-group {
+    padding: 10px;
+}
+
+.form-control {
+    height: 30px
+}
+
 .form-input-group label {
     font-size: 14px;
     padding-top: 2px
@@ -26,13 +39,7 @@
         box-shadow: unset
     }
 
-.style-checkbox {
-    padding: 6px 12px;
-    display: block;
-    border: none;
-    width: 10%;
-    height: 16px;
-}
+
 
 .bold {
     font-weight: bold;
@@ -84,12 +91,6 @@
 
 .page-container .main-content .panel-default {
     margin: -20px;
-}
-
-.page-container .main-content .panel-fix {
-    padding: unset;
-    margin: unset;
-    margin-top:20px
 }
 
 .sidebar-menu .main-menu {
@@ -223,20 +224,26 @@
             }
 
 .nav.nav-tabs > li {
-    padding: unset;
-    margin: unset;
+    padding:unset;
+    margin:unset;
 }
 
     .nav.nav-tabs > li > a {
         padding: 5px;
         margin: 3px;
         font-size: 13px;
+        
     }
 
     .nav.nav-tabs > li.active > a {
         background-color: #40bbea;
         color: #fff
     }
+
+.page-container .main-content .page-title .title-env {
+    float: left;
+    padding-left: 20px;
+}
 
 @media (max-width:767px) {
     .navbar-nav .open .dropdown-menu {

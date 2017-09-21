@@ -811,39 +811,6 @@
                     </li>
                     <li>
                         <a href="#">
-                            <i class="linecons-camera"></i>
-                            <span class="title">Tổng đài</span>
-                        </a>
-                        <ul>
-                            <li>
-                                <a href="#">
-                                    <span class="title">Nghiệp vụ</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">Thiết lập</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">Xử lý định kỳ</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">Truy vấn</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <span class="title">Báo cáo</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">
                             <i class="linecons-paper-plane"></i>
                             <span class="title">Quản lý dự án</span>
                         </a>
@@ -1295,7 +1262,7 @@
                 </div>
 
             </div>
-            <nav class="navbar navbar-default" role="navigation" style=" margin: -20px;min-height:20px;margin-bottom: 30px;">
+            <!--<nav class="navbar navbar-default" role="navigation" style="margin-left:-20px;margin-right:-20px;margin-top:-20px;min-height:20px;">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
                         <span>Danh mục </span>
@@ -1303,12 +1270,12 @@
                     </button>
                 </div>
                 <div class="navbar-collapse" id="navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" style="margin-left:-20px;margin-top:10px">
                         <li class="disable">
-                            <a href="javascript:;" onclick="jQuery('#modal-6').modal('show', {backdrop: 'static'});"><i class="fa fa-plus"></i> Thêm</a>
+                            <a href="javascript:;" onclick="jQuery('#modal-1').modal('show', {backdrop: 'static'});"><i class="fa fa-plus"></i> Thêm</a>
                         </li>
                         <li class="disable">
-                            <a href="#"><i class="fa fa-search"></i>Xem</a>
+                            <a href="javascript:;"><i class="fa fa-search"></i>Xem</a>
                         </li>
                         <li class="disable">
                             <a href="#"><i class="fa fa-edit"></i> Sửa</a>
@@ -1339,32 +1306,16 @@
                         </li>
                     </ul>
                 </div>
-                <!-- /.navbar-collapse -->
-            </nav>
+            </nav>-->
             <div class="panel panel-default">
-                <div class="panel-body" style="padding:5px">
-                    <div class="col-sm-5" style="margin-left:-20px">
-
-                        <div class="form-group" style="margin-bottom:5px">
-                            <select class="form-control" id="s2example-3" style="height:25px;padding:2px">
-                                <option>-- Tìm theo --</option>
-                                <option value="al">Theo người tạo</option>
-                                <option value="au">Theo quyền</option>
-                                <option value="bd">Theo sở hữu</option>
-                                <option value="br">Theo bộ phận</option>
-                                <option value="ca">Theo cây bộ phận</option>
-                                <option value="cn">Loại dh</option>
-                            </select>
-                        </div>
-
-
+                <div class="panel-body" style="padding:5px;margin-left: -25px;margin-top: -20px;margin-right: -20px;">
+                    <div class="col-sm-3" style="margin-top:15px;margin-left:-10px;padding-right:unset">
                         <div class="input-group" style="margin-bottom:5px">
                             <input type="text" class="form-control no-right-border form-focus-success" style="height:25px;padding:2px">
                             <span class="input-group-btn">
-                                <button class="btn btn-success" type="button" style="height:25px;padding:2px"><i class="fa fa-search"></i> Tìm kiếm!</button>
+                                <button class="btn btn-success" type="button" style="height:25px;padding:2px"><i class="fa fa-search"></i>&nbsp;&nbsp;<i class="fa fa-refresh"></i></button>
                             </span>
                         </div>
-
                         <script type="text/javascript">
                             jQuery(document).ready(function ($) {
                                 $("#table-1").dataTable({
@@ -1373,7 +1324,7 @@
                                     //"lengthChange": false,
                                     "paging": false,
                                     //"scrollX": true,
-                                    "scrollY": "550px",
+                                    "scrollY": "650px",
                                     "ordering": false,
                                     "info": false,
                                     "dom": 't',
@@ -1381,7 +1332,7 @@
                                     responsive: true,
                                     columnDefs: [
                                         { responsivePriority: 1, targets: 0 },
-                                        { responsivePriority: 2, targets: -2 }
+                                        { responsivePriority: 2, targets: 4 }
                                     ]
                                 });
                                 $("#table-2").dataTable({
@@ -1390,7 +1341,7 @@
                                     //"lengthChange": false,
                                     "paging": false,
                                     //"scrollX": true,
-                                    "scrollY": "200px",
+                                    "scrollY": "255px",
                                     "ordering": false,
                                     "info": false,
                                     "dom": 't',
@@ -1407,7 +1358,7 @@
                                     //"lengthChange": false,
                                     "paging": false,
                                     //"scrollX": true,
-                                    "scrollY": "200px",
+                                    "scrollY": "160px",
                                     "ordering": false,
                                     "info": false,
                                     "dom": 't',
@@ -1857,11 +1808,11 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="col-sm-7" style="color:black">
-                        <div class="scrollable" data-max-height="650">
+                    <div class="col-sm-9" style="color:black;padding-right:unset">
+                        <div class="scrollable" data-max-height="750">
                             <div class="modal-body">
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12" style="padding:unset">
                                         <div class="breadcrumb-env">
 
                                             <ol class="breadcrumb bc-2">
@@ -1990,12 +1941,6 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="#tab-13" data-toggle="tab">
-                                                    <span class="visible-xs"><i class="fa-envelope-o"></i></span>
-                                                    <span class="hidden-xs">Chi tiết mặt hàng</span>
-                                                </a>
-                                            </li>
-                                            <li>
                                                 <a href="#tab-14" data-toggle="tab">
                                                     <span class="visible-xs"><i class="fa-cog"></i></span>
                                                     <span class="hidden-xs">Tồn kho</span>
@@ -2019,16 +1964,22 @@
                                                     <span class="hidden-xs">Thành tiền</span>
                                                 </a>
                                             </li>
-                                            <li>
+                                            <!--<li>
                                                 <a href="#tab-18" data-toggle="tab">
                                                     <span class="visible-xs"><i class="fa-bell-o"></i></span>
                                                     <span class="hidden-xs">Thông tin giao hàng</span>
                                                 </a>
-                                            </li>
+                                            </li>-->
                                             <li>
                                                 <a href="#tab-19" data-toggle="tab">
                                                     <span class="visible-xs"><i class="fa-bell-o"></i></span>
                                                     <span class="hidden-xs">Hóa đơn</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#tab-13" data-toggle="tab">
+                                                    <span class="visible-xs"><i class="fa-envelope-o"></i></span>
+                                                    <span class="hidden-xs">Chi tiết mặt hàng</span>
                                                 </a>
                                             </li>
                                             <li>
@@ -2038,7 +1989,7 @@
                                                 </a>
                                             </li>
                                         </ul>
-                                        <div class="tab-content" style="padding-top:10px">
+                                        <div class="tab-content" style="padding:unset;padding-top:10px">
 
                                             <div class="tab-pane active" id="tab-11">
                                                 <div class="col-md-12">
@@ -2065,7 +2016,7 @@
                                                         </ol>
 
                                                     </div>
-                                                    <table id="table-2" class="table table-striped table-bordered display nowrap">
+                                                    <table id="table-2" class="table table-striped table-bordered display nowrap" style="width:100%">
                                                         <thead>
                                                             <tr>
                                                                 <th>Mã hàng</th>
@@ -2149,14 +2100,44 @@
                                                                 <td>Đã duyệt</td>
                                                                 <td>2946513514</td>
                                                             </tr>
+                                                            <tr>
+                                                                <td>MH-370</td>
+                                                                <td>Gạch Đồng Tâm Long Biên</td>
+                                                                <td>CÔNG TY TNHH  XD TM ĐẠI Á CHÂU</td>
+                                                                <td>Đỏ</td>
+                                                                <td>Gạch xây dựng</td>
+                                                                <td>10 x 20</td>
+                                                                <td>Đã duyệt</td>
+                                                                <td>2946513514</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MH-370</td>
+                                                                <td>Gạch Đồng Tâm Long Biên</td>
+                                                                <td>CÔNG TY TNHH  XD TM ĐẠI Á CHÂU</td>
+                                                                <td>Đỏ</td>
+                                                                <td>Gạch xây dựng</td>
+                                                                <td>10 x 20</td>
+                                                                <td>Đã duyệt</td>
+                                                                <td>2946513514</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>MH-370</td>
+                                                                <td>Gạch Đồng Tâm Long Biên</td>
+                                                                <td>CÔNG TY TNHH  XD TM ĐẠI Á CHÂU</td>
+                                                                <td>Đỏ</td>
+                                                                <td>Gạch xây dựng</td>
+                                                                <td>10 x 20</td>
+                                                                <td>Đã duyệt</td>
+                                                                <td>2946513514</td>
+                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane" id="tab-12">
+                                            <div class="tab-pane" id="tab-12" style="margin:unset">
                                                 <div class="col-md-6">
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed ">
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold"><a href="#" data-toggle="panel">Địa điểm giao hàng</a></h5>
                                                             <div class="panel-options">
@@ -2203,7 +2184,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed">
                                                         <!-- Add class "collapsed" to minimize the panel -->
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold"><a href="#" data-toggle="panel">Kiểm soát giao hàng</a></h5>
@@ -2235,7 +2216,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed">
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold">
                                                                 <a href="#" data-toggle="panel">Thông tin giao hàng</a>
@@ -2280,7 +2261,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed">
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold">
                                                                 <a href="#" data-toggle="panel">Thông tin trả hàng</a>
@@ -2337,225 +2318,9 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane" id="tab-13">
-                                                <div class="col-md-6">
-                                                    <div class="col-md-12">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Thông tin chi tiết</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">Ghi chú:</label>
-                                                                <input type="text" class="style-input">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label" style="font-size: 11px">Lý do xuất:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Option 1</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Loại mặt hàng:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0">Vậy tư dự án</option>
-                                                                    <option value="1">Hàng bán</option>
-                                                                    <option value="2">Hàng trả lại</option>
-                                                                    <option value="3">Hàng khuyến mãi</option>
-                                                                    <option value="4">Chiết khấu</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Tình trạng:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Đặt hàng</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Dành hàng:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Không kiểm tra</option>
-                                                                    <option value="2">Tùy theo mặt hàng</option>
-                                                                    <option value="3">Luôn luôn</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12" style="margin-top: 25px">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Tồn kho</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">Đơn vị tính:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Kg</option>
-                                                                    <option value="2">Bao</option>
-                                                                    <option value="3">Khối</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Hệ số:</label>
-                                                                <input type="text" class="style-input" placeholder="1.00">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Hệ số, CW:</label>
-                                                                <input type="text" class="style-input" placeholder="1.00">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="col-md-12">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Thuế</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">% thuế XK:</label>
-                                                                <input class="style-input" type="text" placeholder="0.00%">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">% thuế TTĐB:</label>
-                                                                <input type="text" class="style-input" placeholder="0.00%">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Mã thuế GTGT</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Thuế GTGT 5%</option>
-                                                                    <option value="2">Thuế GTGT 10%</option>
-                                                                    <option value="2">Thuế GTGT 20%</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 mt25">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Hoa hồng</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">Nhân viên bán hàng:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1"></option>
-                                                                    <option value="2"></option>
-                                                                    <option value="2"></option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 mt25">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Kiểm soát chất lượng</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">Tình trạng chất lượng:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1"></option>
-                                                                    <option value="2"></option>
-                                                                    <option value="2"></option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Đơn hàng chất lượng:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1"></option>
-                                                                    <option value="2"></option>
-                                                                    <option value="2"></option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="col-md-12">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Tài khoản</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">TK tồn kho</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Thuế GTGT 5%</option>
-                                                                    <option value="2">Thuế GTGT 10%</option>
-                                                                    <option value="2">Thuế GTGT 20%</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">TK giá vốn</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Thuế GTGT 5%</option>
-                                                                    <option value="2">Thuế GTGT 10%</option>
-                                                                    <option value="2">Thuế GTGT 20%</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">TK doanh thu</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Thuế GTGT 5%</option>
-                                                                    <option value="2">Thuế GTGT 10%</option>
-                                                                    <option value="2">Thuế GTGT 20%</option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">TK công nợ</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1">Thuế GTGT 5%</option>
-                                                                    <option value="2">Thuế GTGT 10%</option>
-                                                                    <option value="2">Thuế GTGT 20%</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 mt25">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Đơn hàng gốc</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">Số thứ tự:</label>
-                                                                <input type="text" class="style-input" placeholder="0">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12 mt25">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title bold">Tham chiếu</h5>
-                                                        </div>
-                                                        <div class="col-md-12 mt15">
-                                                            <div class="form-group">
-                                                                <label class="control-label">Nguồn tham chiếu:</label>
-                                                                <select class="style-input">
-                                                                    <option value="0"></option>
-                                                                    <option value="1"></option>
-                                                                    <option value="2"></option>
-                                                                    <option value="2"></option>
-                                                                </select>
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label class="control-label">Số tham chiếu:</label>
-                                                                <input type="text" class="style-input">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
                                             <div class="tab-pane" id="tab-14">
                                                 <div class="col-md-6">
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed">
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold">
                                                                 <a href="#" data-toggle="panel">Yếu tố tồn kho</a>
@@ -2615,11 +2380,9 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed">
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold">
                                                                 <a href="#" data-toggle="panel">Yếu tố mặt hàng</a>
@@ -2663,7 +2426,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <div class="panel panel-default collapsed">
+                                                    <div class="panel panel-default panel-fix collapsed">
                                                         <div class="panel-heading">
                                                             <h5 class="panel-title bold">
                                                                 <a href="#" data-toggle="panel">Yếu tố phân tích</a>
@@ -2705,8 +2468,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-
-
                                                 </div>
                                             </div>
 
@@ -2929,7 +2690,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="tab-pane" id="tab-18">
+                                            <!--<div class="tab-pane" id="tab-18">
 
                                                 <div class="col-md-6">
                                                     <div class="col-md-12">
@@ -3075,7 +2836,7 @@
                                                     </div>
                                                 </div>
 
-                                            </div>
+                                            </div>-->
 
                                             <div class="tab-pane" id="tab-19">
                                                 <div class="col-md-6">
@@ -3207,6 +2968,222 @@
                                                 </div>
                                             </div>
 
+                                            <div class="tab-pane" id="tab-13">
+                                                <div class="col-md-6">
+                                                    <div class="col-md-12">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Thông tin chi tiết</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Ghi chú:</label>
+                                                                <input type="text" class="style-input">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label" style="font-size: 11px">Lý do xuất:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Option 1</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Loại mặt hàng:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0">Vậy tư dự án</option>
+                                                                    <option value="1">Hàng bán</option>
+                                                                    <option value="2">Hàng trả lại</option>
+                                                                    <option value="3">Hàng khuyến mãi</option>
+                                                                    <option value="4">Chiết khấu</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Tình trạng:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Đặt hàng</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Dành hàng:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Không kiểm tra</option>
+                                                                    <option value="2">Tùy theo mặt hàng</option>
+                                                                    <option value="3">Luôn luôn</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12" style="margin-top: 25px">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Tồn kho</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Đơn vị tính:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Kg</option>
+                                                                    <option value="2">Bao</option>
+                                                                    <option value="3">Khối</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Hệ số:</label>
+                                                                <input type="text" class="style-input" placeholder="1.00">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Hệ số, CW:</label>
+                                                                <input type="text" class="style-input" placeholder="1.00">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="col-md-12">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Thuế</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">% thuế XK:</label>
+                                                                <input class="style-input" type="text" placeholder="0.00%">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">% thuế TTĐB:</label>
+                                                                <input type="text" class="style-input" placeholder="0.00%">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Mã thuế GTGT</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Thuế GTGT 5%</option>
+                                                                    <option value="2">Thuế GTGT 10%</option>
+                                                                    <option value="2">Thuế GTGT 20%</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt25">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Hoa hồng</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Nhân viên bán hàng:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1"></option>
+                                                                    <option value="2"></option>
+                                                                    <option value="2"></option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt25">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Kiểm soát chất lượng</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Tình trạng chất lượng:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1"></option>
+                                                                    <option value="2"></option>
+                                                                    <option value="2"></option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Đơn hàng chất lượng:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1"></option>
+                                                                    <option value="2"></option>
+                                                                    <option value="2"></option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <div class="col-md-12">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Tài khoản</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">TK tồn kho</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Thuế GTGT 5%</option>
+                                                                    <option value="2">Thuế GTGT 10%</option>
+                                                                    <option value="2">Thuế GTGT 20%</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">TK giá vốn</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Thuế GTGT 5%</option>
+                                                                    <option value="2">Thuế GTGT 10%</option>
+                                                                    <option value="2">Thuế GTGT 20%</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">TK doanh thu</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Thuế GTGT 5%</option>
+                                                                    <option value="2">Thuế GTGT 10%</option>
+                                                                    <option value="2">Thuế GTGT 20%</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">TK công nợ</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1">Thuế GTGT 5%</option>
+                                                                    <option value="2">Thuế GTGT 10%</option>
+                                                                    <option value="2">Thuế GTGT 20%</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt25">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Đơn hàng gốc</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Số thứ tự:</label>
+                                                                <input type="text" class="style-input" placeholder="0">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12 mt25">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title bold">Tham chiếu</h5>
+                                                        </div>
+                                                        <div class="col-md-12 mt15">
+                                                            <div class="form-group">
+                                                                <label class="control-label">Nguồn tham chiếu:</label>
+                                                                <select class="style-input">
+                                                                    <option value="0"></option>
+                                                                    <option value="1"></option>
+                                                                    <option value="2"></option>
+                                                                    <option value="2"></option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label class="control-label">Số tham chiếu:</label>
+                                                                <input type="text" class="style-input">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="tab-pane" id="tab-20">
                                                 <div class="col-md-6">
                                                     <div class="col-md-12">
@@ -3280,42 +3257,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <!--<div class="modal-footer">
                                 <button type="button" class="btn btn-info"><i class="fa fa-save"></i> Lưu</button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Main Footer -->
-            <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
-            <!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
-            <!-- Or class "fixed" to  always fix the footer to the end of page -->
-            <footer class="main-footer sticky footer-type-1">
-
-                <div class="footer-inner">
-
-                    <!-- Add your copyright text here -->
-                    <div class="footer-text">
-                        &copy; 2014
-                        <strong>Xenon</strong>
-                        theme by <a href="http://laborator.co" target="_blank">Laborator</a> - <a href="http://themeforest.net/item/xenon-bootstrap-admin-theme/9059661?ref=Laborator" target="_blank">Purchase for only <strong>23$</strong></a>
-                    </div>
-
-
-                    <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
-                    <div class="go-up">
-
-                        <a href="#" rel="go-top">
-                            <i class="fa-angle-up"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </footer>
         </div>
 
         <div id="chat" class="fixed">
@@ -3396,9 +3345,7 @@
     </div>
 
     <div class="footer-sticked-chat">
-        <!-- Start: Footer Sticked Chat -->
         <ul class="chat-conversations list-unstyled">
-
             <li class="browse-more">
                 <!-- User Info Link -->
                 <a href="#" class="chat-user">
@@ -3411,32 +3358,16 @@
                 <a href="#" class="chat-user">
                     <i class="fa fa-user-md"></i>
                     ADMIN
-                </a>
-            </li>
-            <li class="browse-more">
-                <!-- User Info Link -->
-                <a href="#" class="chat-user">
+                    &nbsp;&nbsp;
                     <i class="fa fa-user"></i>
                     ERP
-                </a>
-            </li>
-            <li class="browse-more">
-                <!-- User Info Link -->
-                <a href="#" class="chat-user">
+                    &nbsp;&nbsp;
                     <i class="fa fa-desktop"></i>
-                    172.16.5.81\SQL2012
-                </a>
-            </li>
-            <li class="browse-more">
-                <!-- User Info Link -->
-                <a href="#" class="chat-user">
+                    172.16.7.62
+                    &nbsp;&nbsp;
                     <i class="fa fa-database"></i>
                     LVERP
-                </a>
-            </li>
-            <li class="browse-more">
-                <!-- User Info Link -->
-                <a href="#" class="chat-user">
+                    &nbsp;&nbsp;
                     <i class="fa fa-calendar"></i>
                     <script>
                         var currentDate = new Date(),
@@ -3445,17 +3376,12 @@
                             year = currentDate.getFullYear();
                         document.write(day + "/" + month + "/" + year)
                     </script>
-                </a>
-            </li>
-            <li class="browse-more">
-                <!-- User Info Link -->
-                <a href="#" class="chat-user">
+                    &nbsp;&nbsp;
                     <i class="fa fa-clock-o"></i>
                     <text id="times"></text>
                 </a>
             </li>
         </ul>
-
         <a href="#" class="mobile-chat-toggle">
             <i class="linecons-comment"></i>
             <span class="num">6</span>
