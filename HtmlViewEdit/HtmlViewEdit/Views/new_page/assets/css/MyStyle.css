@@ -93,6 +93,13 @@
     margin: -20px;
 }
 
+.page-container .main-content .panel-fix {
+    padding: unset;
+    margin: unset;
+    margin-top: 20px
+}
+
+
 .sidebar-menu .main-menu {
     padding-left: 5px;
     padding-right: 5px;
@@ -244,6 +251,12 @@
     float: left;
     padding-left: 20px;
 }
+
+ol.breadcrumb.bc-1{
+    padding:unset;
+    padding-left:5px;
+    margin-bottom:unset
+} 
 
 @media (max-width:767px) {
     .navbar-nav .open .dropdown-menu {

@@ -1406,7 +1406,9 @@
     <Content Include="Views\mailbox-main.html" />
     <Content Include="Views\mailbox-message.html" />
     <Content Include="Views\MenuNew.html" />
+    <Content Include="Views\new_page\assets\css\MyStyle.css" />
     <Content Include="Views\new_page\Orders.html" />
+    <Content Include="Views\new_page\tables-datas3.html" />
     <Content Include="Views\skin-aero.html" />
     <Content Include="Views\skin-concrete.html" />
     <Content Include="Views\skin-facebook.html" />
